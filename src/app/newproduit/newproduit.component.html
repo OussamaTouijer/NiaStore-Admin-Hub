@@ -1,0 +1,54 @@
+<div class="zina">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="cards" id="services">
+    <!-- Titre de la section -->
+    <h2 class="title">Ajouter Un Produit</h2>
+    <!-- Contenu des cartes -->
+    <div class="content">
+      <div class="carde">
+
+        <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+          <div class="mb-3">
+            <label class="form-label">Nom :</label>
+            <input class="form-control" formControlName="nom">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Marque :</label>
+            <input class="form-control" formControlName="marque">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Description :</label>
+            <textarea class="form-control" formControlName="description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Prix :</label>
+            <input type="number" step="any" class="form-control" formControlName="prix">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Quantite :</label>
+            <input type="number" class="form-control" formControlName="quantite">
+          </div>
+
+          <button type="submit" class="custom-button">Enregistrer Le Produit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
+  <br>
+  <br>  <br>
+  <br>
+  <br>
+</div>

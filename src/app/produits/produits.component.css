@@ -1,0 +1,148 @@
+.zina {
+  background-color: #7FC7D9; /* Fond de la section */
+  color: #0F1035; /* Couleur du texte dans la section */
+}
+
+/* Styles pour le titre de la section */
+.title {
+  display: flex;
+  justify-content: center;
+  color: #141cc9;
+  font-size: 45pt;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+
+
+/* Styles pour le tableau */
+.tablee {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablee th, .tablee td {
+  border: 1px solid #365486; /* Couleur de la bordure du tableau */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styles pour les lignes impaires du tableau */
+.tablee tbody tr:nth-child(odd) {
+  background-color: #DCF2F1;
+}
+
+/* Styles pour les lignes paires du tableau */
+.tablee tbody tr:nth-child(even) {
+  background-color: #7FC7D9;
+}
+
+/*buton ajoute un produit*/
+.oussa{
+    padding: 8px 16px;
+    margin: 8px;
+    margin-right: 50.6%;
+    font-size: 15px;
+    border: 2px solid #141cc9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s;
+    background-color: #365486;
+    color: #ffffff;
+
+  }
+.oussa:hover{
+  background-color: #ffffff;
+  color: #365486;
+}
+ /*la recherche un produits*/
+.buR{
+  padding: 8px 16px;
+  margin: 8px;
+  font-size: 15px;
+  border: 2px solid #141cc9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+  background-color: #365486;
+  color: #ffffff;
+
+}
+.buR:hover {
+  background-color: #ffffff;
+  color: #365486;
+}
+
+.iptR{
+  padding: 8px 16px;
+  margin: 8px;
+  font-size: 15px;
+  border: 2px solid #141cc9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+  background-color: #365486;
+  color: #ffffff;
+
+}
+@media only screen and (max-width: 767px) {
+
+  .zina {
+    background-color: #7FC7D9;
+    color: #0F1035;
+  }
+
+  .title {
+    font-size: 30pt;
+    margin-bottom: 20px;
+  }
+
+  .tablee {
+    width: 50%;
+  }
+
+  .tablee th, .tablee td {
+    padding: 8px;
+  }
+
+  .tablee tbody tr:nth-child(odd) {
+    background-color: #DCF2F1;
+  }
+
+  .tablee tbody tr:nth-child(even) {
+    background-color: #7FC7D9;
+  }
+
+  .oussa {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .buR,
+  .iptR {
+    font-size: 14px;
+  }
+
+  .oussa,
+  .buR,
+  .iptR {
+    padding: 8px 16px;
+    margin: 8px;
+    border: 2px solid #141cc9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.2s;
+    background-color: #365486;
+    color: #ffffff;
+  }
+
+  .oussa:hover,
+  .buR:hover,
+  .iptR:hover {
+    background-color: #ffffff;
+    color: #365486;
+  }
+
+  /* Ajoutez d'autres styles au besoin pour d'autres classes */
+
+}

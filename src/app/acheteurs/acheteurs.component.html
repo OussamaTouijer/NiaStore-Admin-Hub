@@ -1,0 +1,62 @@
+<div class="zina">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="cards" id="services">
+    <!-- Titre de la section -->
+    <h2 class="title">La liste des Acheteurs</h2>
+    <div class="p-3">
+      <div>
+        <button  routerLink="/newacheteur" type="button"  class="oussa ">
+          Ajouter Un Acheteur <i class="bi-plus-circle"></i>
+        </button>
+        <!-- Search input and button -->
+        <input htmlFor="b1" type="text" [(ngModel)]="keyword" class="iptR">
+        <button id="b1" type="button" (click)="cherchAcheteurs(keyword)" class="buR">
+          Recherche
+          <i class="bi bi-search"></i>
+        </button>
+
+      </div>
+
+      <div class="">
+        <div class="">
+          <table class="tablee">
+            <thead>
+            <tr>
+              <th>IDAcheteur</th><th>Nom</th><th>Prenom</th><th>Email</th>
+              <th>Adresse</th><th>Ville</th><th>Administration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let a of acheteurs">
+              <td>{{ a.idAcheteur }}</td><td>{{ a.nom }}</td>
+              <td>{{ a.prenom }}</td><td>{{ a.email }}</td><td>{{ a.adresse }}</td><td>{{ a.ville }}</td>
+             <!-- <td>{{ a.produit.nom }}</td><td>{{ a.produit.prix }}DH</td>-->
+              <td>
+                <button (click)="handleUpdateAcheteur(a)" type="button" class="btn btn-success m-1">mise à jour</button>
+                <br/>
+                <button (click)="handleDeleteAcheteur(a)"  type="button"  class="btn btn-danger  m-1">Supprimer</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
+  <br>
+  <br>  <br>
+  <br>
+  <br>
+
+</div>

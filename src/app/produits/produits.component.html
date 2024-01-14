@@ -1,0 +1,58 @@
+<div class="zina">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="cards" id="services">
+    <!-- Titre de la section -->
+    <h2 class="title">La liste des Produits</h2>
+    <div class="p-3">
+      <div>
+        <button  routerLink="/newproduit" type="button"  class="oussa ">
+          Ajouter Un Produit <i class="bi-plus-circle"></i>
+        </button>
+        <!-- Search input and button -->
+        <input  for="b1" type="text" [(ngModel)]="keyword" class="iptR">
+        <button  id="b1" (click)="cherchProduits(keyword)" class="buR">
+            Recherche
+          <i class="bi bi-search"></i>
+          </button>
+      </div>
+
+      <div class="">
+        <div class="">
+          <table class="tablee">
+            <thead>
+            <tr>
+              <th>IDProduit</th><th>Nom</th><th>Marque</th><!--th>Image</th-->
+              <th>Description</th><th>Prix</th><th>Quantite</th><th>Administration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let p of produits">
+              <td>{{ p.idProduit }}</td><td>{{ p.nom }}</td><td>{{ p.marque }}</td><!--<td><img src="./assets/produitImage/{{ p.nom }}.png" class="img-fluid" alt="{{ p.nom }}"></td>-->
+              <td>{{ p.description }}</td><td>{{ p.prix }}DH</td><td>{{ p.quantite }}</td>
+              <td>
+                <button (click)="handleUpdate(p)" type="button" class="btn btn-success m-1">mise à jour</button>
+                <br/>
+                <button (click)="handleDelete(p)"  type="button"  class="btn btn-danger  m-1">Supprimer</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
+  <br>
+  <br>  <br>
+  <br>
+  <br>
+</div>

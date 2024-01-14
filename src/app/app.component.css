@@ -1,0 +1,145 @@
+/* styles.css */
+/* styles.css (ou votre fichier de styles principal) */
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #ceeae3;
+  color: #dcf2f1;
+  padding: 10px;
+  z-index: 999;
+  height: 7.8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo a {
+  color: #141cc9;
+  margin-left: 50px;
+  margin-right: 130px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour les boutons */
+.custom-btn,
+.btn-outline-success {
+  padding: 8px 16px;
+  margin: 0 8px;
+  font-size: 16px;
+  border: 1px solid #141cc9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+}
+
+.custom-btn {
+  background-color: #365486;
+  color: #ffffff;
+}
+
+.custom-btn:hover {
+  background-color: #79d07b;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #0f1035;
+  color: #7fc7d9;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  justify-content:space-between;
+  bottom: 0;
+  display:flex;
+  position: fixed;
+
+
+}
+footer p {
+  margin: 0;
+}
+.footer-title{
+  font-size:21px;
+  font-weight:600;
+}
+
+.footer-title span{
+  color:#7C9473;
+}
+
+.footer .social-icons a{
+  font-size:21px;
+  padding:0 12px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+
+  header {
+    height: auto;
+    position: static;
+    padding: 15px;
+  }
+
+  .logo a {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .custom-btn,
+  .btn-outline-success {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .social-icons a {
+    padding: 0 8px;
+  }
+
+}
+
+

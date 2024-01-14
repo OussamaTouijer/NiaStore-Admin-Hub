@@ -1,0 +1,60 @@
+<div class="zina">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="cards" id="services">
+    <!-- Titre de la section -->
+    <h2 class="title">La liste des Ventes</h2>
+    <div class="p-3">
+      <div>
+        <button  routerLink="/newvente" type="button"  class="oussa ">
+          Ajouter Un Vente <i class="bi-plus-circle"></i>
+        </button>
+        <!-- Search input and button -->
+        <input  for="b1" type="text" [(ngModel)]="id" class="iptR">
+        <button  id="b1" (click)="cherchVentes(id)" class="buR">
+          Recherche
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+
+      <div class="">
+        <div class="">
+          <table class="tablee">
+            <thead>
+            <tr>
+              <th>IDVente</th><th>IDAcheteur</th><th>IDProduit</th><th>NomAcheteur</th>
+              <th>NomProduit</th><th>PrixVente</th><th>Administration</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let v of ventes">
+              <td>{{ v.idV }}</td><td>{{ v.idA }}</td><td>{{ v.idP }}</td><td>{{ v.acheteur.prenom }}</td>
+              <td>{{ v.produit.nom }}</td><td>{{ v.produit.prix }} DH</td>
+              <td>
+                <button (click)="handleUpdate(v)" type="button" class="btn btn-success m-1">mise à jour</button>
+                <br/>
+                <button (click)="handleDelete(v)"  type="button"  class="btn btn-danger  m-1">Supprimer</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
+  <br>
+  <br>  <br>
+  <br>
+  <br>
+
+</div>
