@@ -1,3 +1,7 @@
+<style>
+
+</style>
+
 <header>
   <nav class="p-3">
     <ul class="nav nav-pills">
@@ -8,26 +12,39 @@
         <button
           (click)="SetCurrentAction(action)"
           routerLink="{{action.route}}"
-          [class]=" action==currentAction ? 'custom-btn' : 'btn btn-outline-success ms-1'"
+          [class]="action == currentAction ? 'custom-btn' : 'btn btn-outline-success ms-1'"
         >
           {{action.title}}
           <i class="bi bi-{{action.icon}}"></i>
         </button>
-
       </li>
 
+    <div class="dfy">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span *ngIf="profile; else not_logged_in">
+            {{profile.username}}
+          </span>
+          <ng-template #not_logged_in>
+            Not Logged
+          </ng-template>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" (click)="login()">Login</a></li>
+          <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+        </ul>
+      </li>
+    </div>
     </ul>
   </nav>
 </header>
 
-  <router-outlet>
+<router-outlet></router-outlet>
 
-  </router-outlet>
-
-
-<footer	 class="footer">
-  <p class="footer-title">NiaStore &copy; 2024 | Copyrights  <span>OussamaTouijer</span></p>
+<footer class="footer">
+  <p class="footer-title">NiaStore &copy; 2024 | Copyrights <span>OussamaTouijer</span></p>
   <div class="social-icons">
-    <a href="https://www.instagram.com/oussama_touijer/" target="blink"><i class="fab fa-instagram"></i>  </a>
+    <a href="https://www.instagram.com/oussama_touijer/" target="blink"><i class="fab fa-instagram"></i></a>
   </div>
 </footer>
+

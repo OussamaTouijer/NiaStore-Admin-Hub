@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,24 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewproduitComponent } from './newproduit/newproduit.component';
 import { NewacheteurComponent } from './newacheteur/newacheteur.component';
 import { NewventeComponent } from './newvente/newvente.component';
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 
+
+function initializeKeycloak(keycloak: KeycloakService) {
+  return () =>
+    keycloak.init({
+      config: {
+        url: 'http://localhost:8080',
+        realm: 'niastore-realm',
+        clientId: 'niastore-angular-client'
+      },
+      initOptions: {
+        onLoad: 'check-sso',//authentifier une seule fois pour acceder dans tous les element de application
+        silentCheckSsoRedirectUri:
+          window.location.origin + '/assets/silent-check-sso.html'
+      }
+    });
+}
 
 @NgModule({
   declarations: [
@@ -33,8 +50,11 @@ import { NewventeComponent } from './newvente/newvente.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    KeycloakAngularModule
   ],
-  providers: [],
+  providers: [
+    {provide : APP_INITIALIZER, deps : [KeycloakService],useFactory : initializeKeycloak, multi : true}//expose la fonction comme un service qui executer aux moment initialitaion de application (utilise provider de type APP_INITIALIZER)
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

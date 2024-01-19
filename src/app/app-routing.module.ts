@@ -9,17 +9,18 @@ import {NewproduitComponent} from "./newproduit/newproduit.component";
 import {AppComponent} from "./app.component";
 import {NewacheteurComponent} from "./newacheteur/newacheteur.component";
 import {NewventeComponent} from "./newvente/newvente.component";
+import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   {path : "" , component : HomeComponent},
   {path : "home" , component : HomeComponent},
-  {path : "produits" , component : ProduitsComponent},
-  {path : "acheteurs" , component : AcheteursComponent},
-  {path : "ventes" , component : VentesComponent},
-  {path : "notifications" , component : NotificationComponent},
-  {path : "newproduit" , component : NewproduitComponent},
-  {path : "newacheteur" , component : NewacheteurComponent},
-  {path : "newvente" , component : NewventeComponent}
+  {path : "produits" , component : ProduitsComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "acheteurs" , component : AcheteursComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "ventes" , component : VentesComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "notifications" , component : NotificationComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "newproduit" , component : NewproduitComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "newacheteur" , component : NewacheteurComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  {path : "newvente" , component : NewventeComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }}
 
 ];
 

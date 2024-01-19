@@ -6,9 +6,9 @@ header {
   width: 100%;
   background-color: #ceeae3;
   color: #dcf2f1;
-  padding: 10px;
+  padding: 15px;
   z-index: 999;
-  height: 7.8%;
+  height: 7.9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,15 +19,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
 
 .logo a {
   color: #141cc9;
   margin-left: 50px;
-  margin-right: 130px;
+  margin-right: 140px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 38px;
   font-family: Arial, sans-serif;
 }
 
@@ -141,5 +143,33 @@ footer p {
   }
 
 }
+/*pour le name de utiisateur*/
+.navbar-nav {
+  background-color: #DCF2F1;
+}
 
+.nav-link {
+  color: #365486;
+}
+
+.dropdown-menu {
+  background-color: #7FC7D9;
+}
+
+.dropdown-item {
+  color: #0F1035;
+}
+
+.dropdown-item:hover {
+  background-color: #DCF2F1;
+  color: #365486;
+}
+
+.dropdown-divider {
+  background-color: #0F1035;
+}
+
+.dfy{
+  margin-left: 300px;
+}
 
