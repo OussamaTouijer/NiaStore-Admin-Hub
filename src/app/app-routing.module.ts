@@ -13,11 +13,11 @@ import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   {path : "" , component : HomeComponent},
-  {path : "home" , component : HomeComponent},
+  {path : "home" , component : HomeComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "produits" , component : ProduitsComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "acheteurs" , component : AcheteursComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "ventes" , component : VentesComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
-  {path : "notifications" , component : NotificationComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
+  //{path : "notifications" , component : NotificationComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "newproduit" , component : NewproduitComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "newacheteur" , component : NewacheteurComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }},
   {path : "newvente" , component : NewventeComponent, canActivate:[AuthGuard], data : { roles:['ADMIN'] }}

@@ -38,7 +38,7 @@ export class AppComponent implements OnInit{
     {title : "Produits" , route : "/produits",icon : ""},
     {title : "Acheteurs" , route : "/acheteurs",icon : "client"},
     {title : "Ventes" , route : "/ventes",icon : ""},
-    {title : "Notification" , route : "/notifications",icon : ""},
+    //{title : "Notification" , route : "/notifications",icon : ""},
 
   ];
 
