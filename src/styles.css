@@ -4,7 +4,7 @@
 :root {
   --primary-color: #ffffff; /* Une belle couleur verte */
   --secondary-color: #FF5722; /* Une couleur complémentaire orange */
-  --text-color: #333; /* Couleur du texte principal */
-  --heading-color: #000; /* Couleur des titres */
+  --text-color: #000000; /* Couleur du texte principal */
+  --heading-color: #000000; /* Couleur des titres */
 }
 

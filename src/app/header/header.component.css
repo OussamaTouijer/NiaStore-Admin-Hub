@@ -29,17 +29,7 @@
   margin: 0;
 }
 
-.nav__link {
-  text-decoration: none;
-  color: var(--text-color);
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
 
-.nav__link:hover {
-  color: var(--secondary-color);
-  font-weight: bold;
-}
 
 /* Icônes sociales */
 .social__links a {
@@ -53,19 +43,28 @@
 }
 
 
-/*pour nav bar*/
+/*pour nav bar button comme text */
 .nbro {
   background: none;              /* Supprime l'arrière-plan */
   border: none;                  /* Supprime la bordure */
-  color: inherit;                /* Hérite de la couleur du texte parent */
+  /*color: inherit;                 Hérite de la couleur du texte parent */
   font: inherit;                 /* Hérite de la police du texte parent */
   padding: 0;                    /* Supprime l'espace interne (padding) */
   cursor: pointer;              /* Indique que l'élément est cliquable */
   text-decoration: none;         /* Enlève le soulignement par défaut */
-  transition: color 0.3s, text-decoration 0.3s; /* Pour un effet de transition au survol */
+  /*transition: color 0.3s, text-decoration 0.3s;  Pour un effet de transition au survol */
+  list-style: none;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
+
 }
 
 .nbro:hover {
-  color: #007bff;                /* Changer la couleur du texte au survol */
-  text-decoration: underline;    /* Ajouter un soulignement au survol */
+  /* color: #007bff;          Changer la couleur du texte au survol */
+  /*text-decoration: underline;     Ajouter un soulignement au survol */
+  color: var(--secondary-color);
+  font-weight: bold;
 }
