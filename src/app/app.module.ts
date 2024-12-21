@@ -18,6 +18,7 @@ import { NewventeComponent } from './newvente/newvente.component';
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {RouterModule} from "@angular/router";
 
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
@@ -59,11 +60,13 @@ import { HeaderComponent } from './header/header.component';
     KeycloakAngularModule,
     NgxPaginationModule // Ajouter ici
   ],
+  exports: [RouterModule],
 
 
- /* providers: [
-    {provide : APP_INITIALIZER, deps : [KeycloakService],useFactory : initializeKeycloak, multi : true}//expose la fonction comme un service qui executer aux moment initialitaion de application (utilise provider de type APP_INITIALIZER)
-  ],*/
+
+  /* providers: [
+     {provide : APP_INITIALIZER, deps : [KeycloakService],useFactory : initializeKeycloak, multi : true}//expose la fonction comme un service qui executer aux moment initialitaion de application (utilise provider de type APP_INITIALIZER)
+   ],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }

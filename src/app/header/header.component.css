@@ -51,3 +51,21 @@
 .social__links a:hover {
   color: var(--secondary-color);
 }
+
+
+/*pour nav bar*/
+.nbro {
+  background: none;              /* Supprime l'arrière-plan */
+  border: none;                  /* Supprime la bordure */
+  color: inherit;                /* Hérite de la couleur du texte parent */
+  font: inherit;                 /* Hérite de la police du texte parent */
+  padding: 0;                    /* Supprime l'espace interne (padding) */
+  cursor: pointer;              /* Indique que l'élément est cliquable */
+  text-decoration: none;         /* Enlève le soulignement par défaut */
+  transition: color 0.3s, text-decoration 0.3s; /* Pour un effet de transition au survol */
+}
+
+.nbro:hover {
+  color: #007bff;                /* Changer la couleur du texte au survol */
+  text-decoration: underline;    /* Ajouter un soulignement au survol */
+}

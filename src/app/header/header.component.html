@@ -2,16 +2,20 @@
   <div class="container d-flex align-items-center justify-content-between">
     <!-- Logo -->
     <div class="logo">
-      <a routerLink="../home">
+      <a (click)="navigateToHome()" href="javascript:void(0)">
         <img src="../../assets/headerLOgo.png" alt="Logo" class="logo-img" />
       </a>
     </div>
 
+
     <!-- Navigation -->
     <nav class="nav">
       <ul class="nav__list d-flex align-items-center gap-4">
+<!--        <li *ngFor="let link of navLinks">-->
+<!--          <a [routerLink]="link.path" class="nav__link">{{ link.display }}</a>-->
+<!--        </li>-->
         <li *ngFor="let link of navLinks">
-          <a [routerLink]="link.path" class="nav__link">{{ link.display }}</a>
+          <button (click)="navigateTo(link.path)" class="nbro nav__link">{{ link.display }}</button>
         </li>
       </ul>
     </nav>

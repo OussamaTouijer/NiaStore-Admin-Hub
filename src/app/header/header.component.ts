@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -19,4 +20,15 @@ export class HeaderComponent {
     { icon: 'ri-linkedin-box-fill', link: '#' },
     { icon: 'ri-youtube-fill', link: '#' },
   ];
+
+  constructor(private router: Router) {}
+
+  navigateTo(path: string): void {
+    this.router.navigate([path]).then(() => {
+      window.location.reload();
+    });
+  }
+  navigateToHome(): void {
+    this.router.navigate(['../home']);  // Utilisez le chemin relatif ici
+  }
 }
