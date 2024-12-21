@@ -1,15 +1,17 @@
 .zina {
-  background-color: #7FC7D9; /* Choisissez votre couleur de fond ici */
+  background-color: #E5E1DA; /* Choisissez votre couleur de fond ici */
 }
 
 /* Styles pour le titre de la section */
 .title {
   display: flex;
   justify-content: center;
-  color: #141cc9;
-  font-size: 53pt;
+  color: #000000;
+  font-size: 7.2rem;
   font-weight: 800;
   margin-bottom: 30px;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
+
 }
 
 /* Styles pour le conteneur des cartes */
@@ -22,33 +24,33 @@
 
 /* Styles pour chaque carte */
 .carde {
-  background-color: #365486;
+  background-color: #E5E1DFFF;
   width: 340px;
-  box-shadow: 1px 5px 25px #d3dedc;
+  box-shadow: 1px 5px 25px #B3C8CF;
   border-radius: 10px;
   padding: 25px;
   margin: 15px;
 }
 
 .carde:hover {
-  transform: scale(1.2);
+  transform: scale(1.01);
 }
 
 /* Styles pour l'icône de chaque carte */
 .icon {
-  color: #7FC7D9;
+  color: #ffffff;
   font-size: 128px;
   text-align: center;
 }
 
 /* Styles pour les informations de chaque carte */
 .info {
-  color: #7FC7D9;
+  color: #000000;
   text-align: center;
 }
 
 .info h3 {
-  color: #ffffff;
+  color: #8f8d8d;
   font-size: 18px;
   font-weight: 700;
   margin: 10px;

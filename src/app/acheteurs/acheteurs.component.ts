@@ -11,6 +11,8 @@ import {AcheteurService} from "../services/acheteur.service";
 export class AcheteursComponent implements OnInit{
   public acheteurs : Array<Acheteur>=[];
   public keyword : string="";
+  currentPage = 1;
+
   constructor(private acheteurService:AcheteurService) {//injection des dependence
 
   }

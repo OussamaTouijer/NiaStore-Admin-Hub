@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class ProduitsComponent implements OnInit{
   public produits : Array<Produit>=[];
   public keyword : string="";
+  currentPage = 1;
   constructor(private produitService:ProduitService) {//injection des dependence
 
   }

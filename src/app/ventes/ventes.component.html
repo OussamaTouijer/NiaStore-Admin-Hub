@@ -1,12 +1,12 @@
 <div class="zina">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>-->
   <section class="cards" id="services">
     <!-- Titre de la section -->
     <h2 class="title">La liste des Ventes</h2>
@@ -33,7 +33,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let v of ventes">
+            <tr *ngFor="let v of ventes | paginate: { itemsPerPage: 10, currentPage: currentPage }">
               <td>{{ v.idV }}</td><td>{{ v.idA }}</td><td>{{ v.idP }}</td><td>{{ v.acheteur.prenom }}</td>
               <td>{{ v.produit.nom }}</td><td>{{ v.produit.prix }} DH</td>
               <td>
@@ -48,13 +48,21 @@
       </div>
     </div>
 
+    <div class="pagination-container">
+      <pagination-controls
+        (pageChange)="currentPage = $event"
+        previousLabel="Précédent"
+        nextLabel="Suivant">
+      </pagination-controls>
+    </div>
+
   </section>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br>
-  <br>
-  <br>  <br>
-  <br>
-  <br>
+<!--  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+<!--  <br>-->
+<!--  <br>-->
+<!--  <br>  <br>-->
+<!--  <br>-->
+<!--  <br>-->
 
 </div>

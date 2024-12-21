@@ -13,6 +13,8 @@ import {VenteService} from "../services/vente.service";
 export class VentesComponent implements OnInit{
   public ventes : Array<Vente>=[];
   public id!: number;
+  currentPage = 1;
+
   constructor(private venteService:VenteService) {//injection des dependence
 
   }

@@ -1,5 +1,7 @@
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,9 +16,11 @@ import { NewproduitComponent } from './newproduit/newproduit.component';
 import { NewacheteurComponent } from './newacheteur/newacheteur.component';
 import { NewventeComponent } from './newvente/newvente.component';
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
-function initializeKeycloak(keycloak: KeycloakService) {
+/*function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
@@ -30,7 +34,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
           window.location.origin + '/assets/silent-check-sso.html'
       }
     });
-}
+}*/
 
 @NgModule({
   declarations: [
@@ -42,7 +46,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
     NotificationComponent,
     NewproduitComponent,
     NewacheteurComponent,
-    NewventeComponent
+    NewventeComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -50,11 +56,14 @@ function initializeKeycloak(keycloak: KeycloakService) {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    NgxPaginationModule // Ajouter ici
   ],
-  providers: [
+
+
+ /* providers: [
     {provide : APP_INITIALIZER, deps : [KeycloakService],useFactory : initializeKeycloak, multi : true}//expose la fonction comme un service qui executer aux moment initialitaion de application (utilise provider de type APP_INITIALIZER)
-  ],
+  ],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }

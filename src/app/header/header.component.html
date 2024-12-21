@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="container d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <div class="logo">
+      <a routerLink="../home">
+        <img src="../../assets/headerLOgo.png" alt="Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul class="nav__list d-flex align-items-center gap-4">
+        <li *ngFor="let link of navLinks">
+          <a [routerLink]="link.path" class="nav__link">{{ link.display }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Social Icons -->
+    <div class="social__links d-flex align-items-center gap-3">
+      <a *ngFor="let social of socialLinks" [href]="social.link" target="_blank">
+        <i [class]="social.icon"></i>
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,2 +1,10 @@
 @import "bootstrap-icons/font/bootstrap-icons.min.css";
 /* styles.css (ou votre fichier de styles principal) */
+/* styles.css ou styles.scss */
+:root {
+  --primary-color: #ffffff; /* Une belle couleur verte */
+  --secondary-color: #FF5722; /* Une couleur complémentaire orange */
+  --text-color: #333; /* Couleur du texte principal */
+  --heading-color: #000; /* Couleur des titres */
+}
+

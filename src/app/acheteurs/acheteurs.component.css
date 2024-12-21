@@ -1,24 +1,104 @@
+
+/* Style général de la page */
 .zina {
-  background-color: #7FC7D9; /* Fond de la section */
-  color: #0F1035; /* Couleur du texte dans la section */
+  padding: 2rem;
+  background-color: #E5E1DA;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Styles pour le titre de la section */
 .title {
-  display: flex;
-  justify-content: center;
-  color: #141cc9;
-  font-size: 45pt;
-  font-weight: 800;
-  margin-bottom: 30px;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
 }
 
+
+/* Section Cards */
+.cards {
+  background: #E5E1DA;
+  border-radius: 10px;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  padding: 2rem;
+}
+
+/* Boutons */
+.oussa {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.oussa:hover {
+  background-color: #45a049;
+}
+
+.buR {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.buR:hover {
+  background-color: #0056b3;
+}
+
+/* Champ de recherche */
+.iptR {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  margin-left: 1rem;
+}
+
+/* Table */
+/*.tablee {*/
+/*  width: 100%;*/
+/*  border-collapse: collapse;*/
+/*  margin-top: 1.5rem;*/
+/*  font-size: 1rem;*/
+/*}*/
+
+/*.tablee thead th {*/
+/*  background-color: #b7c7e1;*/
+/*  color: white;*/
+/*  padding: 12px 15px;*/
+/*  text-align: left;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.tablee tbody td {*/
+/*  padding: 10px 15px;*/
+/*  border-bottom: 1px solid #ddd;*/
+/*}*/
+
+/*.tablee tbody tr:nth-child(even) {*/
+/*  background-color: #f9f9f9;*/
+/*}*/
 
 
 /* Styles pour le tableau */
 .tablee {
   width: 100%;
   border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 1rem;
 }
 
 .tablee th, .tablee td {
@@ -29,120 +109,62 @@
 
 /* Styles pour les lignes impaires du tableau */
 .tablee tbody tr:nth-child(odd) {
-  background-color: #DCF2F1;
+  background-color: #d3dcef;
 }
 
 /* Styles pour les lignes paires du tableau */
 .tablee tbody tr:nth-child(even) {
-  background-color: #7FC7D9;
+  background-color: #b7c7e1;
 }
 
-/*buton ajoute un produit*/
-.oussa{
-  padding: 8px 16px;
-  margin: 8px;
-  margin-right: 50.6%;
-  font-size: 15px;
-  border: 2px solid #141cc9;
+
+
+/* Boutons dans le tableau */
+.btn {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.2s;
-  background-color: #365486;
-  color: #ffffff;
-
-}
-.oussa:hover{
-  background-color: #ffffff;
-  color: #365486;
-}
-/*la recherche un produits*/
-.buR{
-  padding: 8px 16px;
-  margin: 8px;
-  font-size: 15px;
-  border: 2px solid #141cc9;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.2s;
-  background-color: #365486;
-  color: #ffffff;
-
-}
-.buR:hover {
-  background-color: #ffffff;
-  color: #365486;
 }
 
-.iptR{
-  padding: 8px 16px;
-  margin: 8px;
-  font-size: 15px;
-  border: 2px solid #141cc9;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.2s;
-  background-color: #365486;
-  color: #ffffff;
-
+.btn-success {
+  background-color: #28a745;
+  color: white;
 }
-@media only screen and (max-width: 767px) {
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tablee {
+    font-size: 0.9rem;
+  }
+
+  .iptR {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .oussa, .buR {
+    width: 100%;
+    margin: 5px 0;
+  }
 
   .zina {
-    background-color: #7FC7D9;
-    color: #0F1035;
+    padding: 1rem;
   }
-
-  .title {
-    font-size: 30pt;
-    margin-bottom: 20px;
-  }
-
-  .tablee {
-    width: 50%;
-  }
-
-  .tablee th, .tablee td {
-    padding: 8px;
-  }
-
-  .tablee tbody tr:nth-child(odd) {
-    background-color: #DCF2F1;
-  }
-
-  .tablee tbody tr:nth-child(even) {
-    background-color: #7FC7D9;
-  }
-
-  .oussa {
-    margin-right: 0;
-    font-size: 14px;
-  }
-
-  .buR,
-  .iptR {
-    font-size: 14px;
-  }
-
-  .oussa,
-  .buR,
-  .iptR {
-    padding: 8px 16px;
-    margin: 8px;
-    border: 2px solid #141cc9;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.2s;
-    background-color: #365486;
-    color: #ffffff;
-  }
-
-  .oussa:hover,
-  .buR:hover,
-  .iptR:hover {
-    background-color: #ffffff;
-    color: #365486;
-  }
-
-  /* Ajoutez d'autres styles au besoin pour d'autres classes */
-
 }
+
+

@@ -1,0 +1,53 @@
+.logo {
+  height: auto;
+}
+
+.logo-img {
+  width: 18rem;  /* Agrandir la largeur du logo */
+  height: auto; /* Laisser la hauteur s'ajuster automatiquement pour garder les proportions */
+}
+
+
+.footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: #F1F0E8;
+}
+
+.footer .logo img {
+  margin-bottom: 1rem;
+}
+.footer .logo p {
+  color: var(--text-color);
+}
+
+.social__links span a {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+}
+
+.footer__link-title {
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.footer__quick-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.footer__quick-links h6 span i {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.copyright {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.copyright span {
+  color: var(--secondary-color);
+}
