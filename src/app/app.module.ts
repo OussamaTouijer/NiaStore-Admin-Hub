@@ -1,7 +1,8 @@
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {RouterModule} from "@angular/router";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 /*function initializeKeycloak(keycloak: KeycloakService) {
@@ -58,6 +60,8 @@ import {RouterModule} from "@angular/router";
     FormsModule,
     ReactiveFormsModule,
     KeycloakAngularModule,
+    MatSidenavModule,
+    MatIconModule,
     NgxPaginationModule // Ajouter ici
   ],
   exports: [RouterModule],
@@ -67,6 +71,15 @@ import {RouterModule} from "@angular/router";
   /* providers: [
      {provide : APP_INITIALIZER, deps : [KeycloakService],useFactory : initializeKeycloak, multi : true}//expose la fonction comme un service qui executer aux moment initialitaion de application (utilise provider de type APP_INITIALIZER)
    ],*/
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+
+
+  providers: [
+       provideAnimationsAsync()
+
+
+
+  ]
 })
 export class AppModule { }

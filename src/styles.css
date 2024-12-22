@@ -8,3 +8,6 @@
   --heading-color: #000000; /* Couleur des titres */
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

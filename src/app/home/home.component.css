@@ -7,9 +7,10 @@
   display: flex;
   justify-content: center;
   color: #000000;
-  font-size: 3.7rem;
+  font-size: 3.8rem;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-family: 'Caveat', cursive; /* Ajout de la police */
 
 }
@@ -27,11 +28,11 @@
 /* Styles pour chaque carte */
 .carde {
   background-color: #E5E1DFFF;
-  width: 400px;
-  height :420px;
+  width: 430px;
+  height: 460px;
   box-shadow: 1px 5px 25px #B3C8CF;
   border-radius: 10px;
-  padding: 25px;
+  padding-top: 7%;
   margin: 15px;
 }
 
@@ -42,7 +43,7 @@
 /* Styles pour l'icône de chaque carte */
 .icon {
   color: #ffffff;
-  font-size: 128px;
+  font-size: 172px;
   text-align: center;
 }
 
@@ -50,13 +51,19 @@
 .info {
   color: #000000;
   text-align: center;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
+  font-size: 25px;
+  padding: 19px;
+
 }
 
 .info h3 {
   color: #8f8d8d;
-  font-size: 18px;
+  font-size: 43px;
   font-weight: 700;
   margin: 10px;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
+
 }
 
 /* Styles pour la carte principale (Home Component) */
@@ -78,6 +85,8 @@
 }
 
 .nub{
+  font-size: 30px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
