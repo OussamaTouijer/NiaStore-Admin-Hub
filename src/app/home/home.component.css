@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   color: #000000;
-  font-size: 7.2rem;
+  font-size: 3.7rem;
   font-weight: 800;
   margin-bottom: 30px;
   font-family: 'Caveat', cursive; /* Ajout de la police */
@@ -27,7 +27,8 @@
 /* Styles pour chaque carte */
 .carde {
   background-color: #E5E1DFFF;
-  width: 340px;
+  width: 400px;
+  height :420px;
   box-shadow: 1px 5px 25px #B3C8CF;
   border-radius: 10px;
   padding: 25px;
