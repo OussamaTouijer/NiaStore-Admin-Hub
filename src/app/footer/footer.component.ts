@@ -44,7 +44,7 @@ export class FooterComponent {
     {
       icon: 'ri-mail-line',
       label: 'Email:',
-      value: 'oussama5toouijer@gmail.com'
+      value: 'oussama5touijer@gmail.com'
     },
     {
       icon: 'ri-phone-line',

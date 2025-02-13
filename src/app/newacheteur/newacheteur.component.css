@@ -1,16 +1,6 @@
-.zina {
-  background-color: #7FC7D9; /* Choisissez votre couleur de fond ici */
-}
 
-/* Styles pour le titre de la section */
-.title {
-  display: flex;
-  justify-content: center;
-  color: #141cc9;
-  font-size: 53pt;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
+
+
 
 /* Styles pour le conteneur des cartes */
 .content {
@@ -20,32 +10,29 @@
   flex-wrap: wrap;
 }
 
-/* Styles pour chaque carte */
+
+
 .carde {
-  background-color: #365486;
+  background-color: #E5E1DFFF;
   width: 50%;
-  box-shadow: 1px 5px 25px #d3dedc;
+  box-shadow: 1px 5px 25px #B3C8CF;
   border-radius: 10px;
   padding: 25px;
   margin: 15px;
 }
 
-form.div{
-  background-color: #365486;
-
-}
-
-
-.form-group {
-  margin-bottom: 15px;
-}
 
 .form-label {
   font-weight: bold;
-  color: #7FC7D9; /* Adjust the color as needed */
+  font-size: 25px;
+  color: #082957; /* Adjust the color as needed */
   display: block;
   margin-bottom: 5px;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
 }
+
+
+
 
 .form-control {
   width: 100%;
@@ -56,11 +43,17 @@ form.div{
   box-sizing: border-box;
 }
 
+
+
+
 /* Optional: Add styles for focus/hover state */
 .form-control:focus,
 .form-control:hover {
   border-color: #007bff; /* Adjust the color for focus/hover state as needed */
 }
+
+
+
 
 .custom-button {
   display: inline-block;
@@ -77,10 +70,70 @@ form.div{
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+
 .custom-button:hover {
   background-color: #141cc9; /* Adjust the hover background color */
   color: #fff; /* Adjust the hover text color */
   border-color: #0056b3; /* Adjust the hover border color */
 }
+
+
+
+
+
+
+
+/* Style général de la page */
+.zina {
+  padding: 2rem;
+  background-color: #E5E1DA;
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-family: 'Caveat', cursive; /* Ajout de la police */
+}
+
+
+/* Section Cards */
+.cards {
+  background: #E5E1DA;
+  border-radius: 10px;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  padding: 2rem;
+  padding-bottom: 34px;
+
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tablee {
+    font-size: 0.9rem;
+  }
+
+  .iptR {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .oussa, .buR {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .zina {
+    padding: 1rem;
+  }
+}
+
+
+
 
 
